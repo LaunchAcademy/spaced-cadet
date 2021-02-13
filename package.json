@@ -1,0 +1,10 @@
+{
+  "name": "spaced-cadet",
+  "version": "0.0.1",
+  "description": "A transform stream for space delimited files",
+  "main": "index.js",
+  "author": "Dan Pickett",
+  "license": "MIT",
+  "private": false,
+  "repository": {"url": "https://github.com/launchacademy/spaced-cadet"}
+}
