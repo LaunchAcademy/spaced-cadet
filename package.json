@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "A transform stream for space delimited files",
   "main": "./dist/spacedCadet.js",
+  "typings": "dist/spacedCadet.d.ts",
   "author": "Dan Pickett",
+  "files": ["dist/"],
   "license": "MIT",
   "private": false,
   "repository": {
@@ -15,6 +17,7 @@
     "lint": "tslint -p tsconfig.json",
     "prepare": "yarn run build",
     "preversion": "npm run lint",
+    "prepublish": "npm run build",
     "test": "jest"
   },
   "devDependencies": {
