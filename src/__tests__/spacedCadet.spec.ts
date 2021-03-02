@@ -1,7 +1,7 @@
 import path from "path"
 import spacedCadet from "../spacedCadet"
 describe("spaced cadet", () => {
-  it("creates a stream", async (done) => {
+  it("creates a stream", (done) => {
     const filePath = path.join(__dirname, "../../test/fixtures/sampleFile.txt")
 
     const stream = spacedCadet(filePath, [
@@ -43,8 +43,8 @@ describe("spaced cadet", () => {
     ])
 
 
-    let records = <any>[]
-    stream.on('data', function(data) {
+    const records = [] as any
+    stream.on('data', (data) => {
       records.push(data)
     })
 
