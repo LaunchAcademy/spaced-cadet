@@ -71,7 +71,7 @@ describe("spaced cadet", () => {
         { name: "CreatedBy", length: 10, start: 9 }]
       })
 
-      const records = <any>[]
+      const records = [] as any
       stream.on('data', (data) => {
         records.push(data)
       })
