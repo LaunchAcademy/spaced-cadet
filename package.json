@@ -1,11 +1,13 @@
 {
   "name": "spaced-cadet",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A transform stream for space delimited files",
   "main": "./dist/spacedCadet.js",
   "typings": "dist/spacedCadet.d.ts",
   "author": "Dan Pickett",
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "license": "MIT",
   "private": false,
   "repository": {
