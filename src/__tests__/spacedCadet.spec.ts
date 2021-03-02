@@ -3,7 +3,6 @@ import spacedCadet from "../spacedCadet"
 describe("spaced cadet", () => {
   it("creates a stream", (done) => {
     const filePath = path.join(__dirname, "../../test/fixtures/sampleFile.txt")
-
     const stream = spacedCadet(filePath, [
       {
         name: "Account",
@@ -53,5 +52,34 @@ describe("spaced cadet", () => {
       done()
     })
 
+  })
+
+  it("handles a header row", (done) => {
+    const filePath = path.join(__dirname, "../../test/fixtures/withHeader.txt")
+    const stream = spacedCadet(filePath, [
+      {
+        name: "Account",
+        length: 8,
+        start: 1
+      }],
+      {
+        header: [{
+          name: "CreatedAt",
+          length: 8,
+          start: 1
+        },
+        { name: "CreatedBy", length: 10, start: 9 }]
+      })
+
+      const records = [] as any
+      stream.on('data', (data) => {
+        records.push(data)
+      })
+
+      stream.on('close', () => {
+        expect(records).toHaveLength(5)
+        expect(records[0].CreatedAt).toBeDefined()
+        done()
+      })
   })
 })
