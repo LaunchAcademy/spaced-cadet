@@ -1,6 +1,6 @@
 {
   "name": "spaced-cadet",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A transform stream for space delimited files",
   "main": "./dist/spacedCadet.js",
   "module": "./dist/spacedCadet.js",
