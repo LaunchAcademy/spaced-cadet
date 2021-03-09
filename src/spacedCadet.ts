@@ -1,6 +1,6 @@
 import { createReadStream } from "fs"
 import byline from "byline"
-import Stream from "./spacedCadet/Stream"
+import Stream from "./spacedCadet/Stream.js"
 
 const spacedCadet = (filePath: string, mapping: any, options: any = {}) : Stream => {
   const readStream = createReadStream(filePath)

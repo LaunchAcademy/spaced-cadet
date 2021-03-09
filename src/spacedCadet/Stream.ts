@@ -1,5 +1,5 @@
 import { Transform } from "stream"
-import MappingItem from "./MappingItem"
+import MappingItem from "./MappingItem.js"
 
 interface StreamOptions {
   header?: any[]

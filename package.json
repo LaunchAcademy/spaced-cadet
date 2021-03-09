@@ -3,6 +3,8 @@
   "version": "0.0.2",
   "description": "A transform stream for space delimited files",
   "main": "./dist/spacedCadet.js",
+  "module": "./dist/spacedCadet.js",
+  "type": "module",
   "typings": "dist/spacedCadet.d.ts",
   "author": "Dan Pickett",
   "files": [
