@@ -1,9 +1,11 @@
 import path from "path"
+import {createReadStream} from "fs"
 import spacedCadet from "../spacedCadet"
 describe("spaced cadet", () => {
   it("creates a stream", (done) => {
     const filePath = path.join(__dirname, "../../test/fixtures/sampleFile.txt")
-    const stream = spacedCadet(filePath, [
+    const readStream = createReadStream(filePath)
+    const stream = spacedCadet(readStream, [
       {
         name: "Account",
         length: 8,
@@ -56,7 +58,8 @@ describe("spaced cadet", () => {
 
   it("handles a header row", (done) => {
     const filePath = path.join(__dirname, "../../test/fixtures/withHeader.txt")
-    const stream = spacedCadet(filePath, [
+    const readStream = createReadStream(filePath)
+    const stream = spacedCadet(readStream, [
       {
         name: "Account",
         length: 8,
